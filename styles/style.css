@@ -1,0 +1,133 @@
+/*
+-
+-
+-
+Note to myself:
+AVOID FLICKERING
+-
+-
+-
+*/
+
+body {
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    font-size: 200%;
+    color: rgb(33, 42, 94);
+    text-align: center;
+}
+
+#main {
+    padding: 30px;
+    margin: auto;
+    width: 350px;
+    background-color: rgb(225, 250, 247);
+    border-radius: 50px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+nav * {
+    font-size: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.form * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type=text] {
+    font-size: 25px;
+    width: 200px;
+    height: 35px;
+    font-family: inherit;
+    color: rgba(33, 42, 94, 0.6);
+    border: none;
+    padding-top: 5px;
+    border-radius: 50px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+input[type=text]::placeholder {
+    font-size: inherit;
+    color: rgba(33, 42, 94, 0.4);
+}
+
+input[type=text]:focus {
+    outline: none;
+}
+
+input[type=text]:focus::placeholder {
+    color: transparent;
+}
+
+input[type=text]::-ms-input-placeholder { /* Microsoft Edge */
+    color: rgba(33, 42, 94, 0.4);
+}
+
+.spacer {
+    margin-top: -10px;
+    height: 40px;
+}
+
+.err {
+    color: rgb(248, 99, 144);
+    font-size: 15px;
+    font-weight: bold;
+    display: none;
+    position: relative;
+    top: -3px;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    height: 210px;
+}
+
+.image * {
+    margin: auto;
+    border-radius: 50px;
+}
+
+#myButt {
+    padding: 14px 18px 10px 18px;
+    margin: auto;
+    border-radius: 50px;
+    font-family: inherit;
+    font-size: 30px;
+    letter-spacing: 1px;
+    color: white;
+    background-color: rgb(93, 222, 231);
+    box-shadow: 0 8px rgb(86, 192, 206);
+    border: none;
+    cursor: pointer;
+    transition: 
+        color 0.1s,
+        background-color 0.1s,
+        box-shadow 0.1s,
+        transform 0.1s;
+}
+
+#myButt:hover {
+    color: white;
+    background-color: rgb(93, 222, 231);
+    box-shadow: 0 10px rgb(86, 192, 206), 0 10px 16px rgba(10, 65, 82, 0.2);
+    transform: translateY(-2px);
+}
+
+#myButt:active {
+    box-shadow: 0 0 rgb(86, 192, 206);
+    transform: translateY(8px);
+}

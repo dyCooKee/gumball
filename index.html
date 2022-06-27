@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="description" content="Test site">
+    <meta name="author" content="Dago">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="600">
+
+    <title>&#9733; Gumball &#9733;</title>
+
+    <base href="<BASEURL>" target="_blank">
+    
+    <link href="images/favicon.ico" rel="icon" type="image/x-icon">
+    <link href="styles/style.css" rel="stylesheet" >
+    <link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="main">
+
+        <div id="nav">
+            <nav>
+                <a target="_self" href="./">Home</a>
+                <a target="_self" href="./about">About</a>
+            </nav>
+        </div>
+        
+        <div class="image">
+            <img
+                id="gum"
+                src="images/gumball.png"
+                alt="my test gumball"
+                width="250px"
+            >
+        </div>
+
+        <div class="form">
+
+            <div class="spacer"></div>
+
+            <label>Enter your name</label>
+
+            <div>
+                <input type="text" id="myIn1" placeholder="Gumball">
+            </div>
+            
+            <div class="spacer">
+                <samp class="err" id="err1">⚠ Invalid name input</samp>
+            </div>
+
+            <label>Enter your age</label>
+
+            <div>
+                <input type="text" id="myIn2" placeholder="12">
+            </div>
+
+            <div class="spacer">
+                <samp class="err" id="err2">⚠ Invalid age input</samp>
+            </div>
+
+            <div>
+                <button onclick="submit()" type="button" id="myButt">SUBMIT</button>
+            </div>
+        </div>
+            <p id="myOut1"></p>
+            <p id="myOut2"></p>
+            <p id="date" style="font-size: 15px;"></p>
+            <audio id="gumball-theme" src="audios/Gumball-theme.mp3" display="none" loop>
+
+    </div>
+
+    <script src="scripts/index.js"></script>
+    <noscript>Sorry, your browser does not support JavaScript!</noscript>
+    
+</body>
+</html>

@@ -54,15 +54,15 @@ function submit(){
         document.getElementById("err2").style.display = "inline-block";
         return;
     }
+    changeImage();
     cleanErr();
     cleanInputs();
-    changeImage();
-    playAudio();
     document.getElementById("myOut1").innerHTML = "Hello "+username+"!";
     document.getElementById("myOut2").innerHTML = "Your are "+age+" years old.";
     document.getElementById("date").innerHTML = "You have submitted on date:<br>"+Date();
     console.log(username, typeof username);
     console.log(age, typeof age);
+    playAudio();
 }
 
 // second way

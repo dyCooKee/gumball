@@ -17,13 +17,12 @@ function changeImage() {
 }
 
 function playAudio() {
-    var audio = document.getElementById("gumball-theme");
     var element = document.getElementById("gum2");
     var elem_display = "none";
-    while (True) {
-      if (element.style.display !== elem_display)
-          break;
+    while (element.style.display === elem_display) {
+      continue;
     }
+    var audio = document.getElementById("gumball-theme");
     audio.volume = 0.25;
     audio.play();
 }

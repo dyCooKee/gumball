@@ -1,27 +1,18 @@
-function cleanErr() {
-    document.getElementById("err1").style.display = "none";
-    document.getElementById("err2").style.display = "none";
-}
-
-function cleanInputs() {
+function cleanForm() {
     var x = document.getElementsByClassName("form");
     for (var i = 0; i < x.length; i++) {
       x[i].style.display = "none";
     }
 }
 
-function changeImage() {
-    var x = document.getElementById("gum");
-    x.id = "gum2";
-    x.src = "images/gumball-theme.webp";
+function playGif() {
+    var gum = document.getElementById("gum");
+    var gum2 = document.getElementById("gum2");
+    gum.style.display = "none";
+    gum2.style.display = "flex";
 }
 
 function playAudio() {
-    var element = document.getElementById("gum2");
-    var elem_display = "none";
-    while (element.style.display === elem_display) {
-      continue;
-    }
     var audio = document.getElementById("gumball-theme");
     audio.volume = 0.25;
     audio.play();
@@ -43,13 +34,9 @@ function submit(){
         document.getElementById("err2").style.display = "inline-block";
         return;
     }
-    cleanErr();
-    cleanInputs();
-    changeImage();
+    cleanForm();
+    playGif();
     playAudio();
     document.getElementById("myOut1").innerHTML = "Hello "+username+"!";
     document.getElementById("myOut2").innerHTML = "Your are "+age+" years old.";
-    document.getElementById("date").innerHTML = "You have submitted on date:<br>"+Date();
-    console.log(username, typeof username);
-    console.log(age, typeof age);
 }

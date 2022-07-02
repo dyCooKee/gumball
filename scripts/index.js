@@ -1,13 +1,3 @@
-// JavaScript
-
-let x;
-console.log(x); // undefined
-// console.clear();
-// window.alert("THIS IS AN ALERT!");
-// window.prompt("How old are you?");
-// window.open('https://www.youtube.com/watch?v=I6vi-jhq3ac', '_blank');
-// window.location.href = 'https://www.youtube.com/watch?v=I6vi-jhq3ac';
-
 let username;
 let age;
 let clicks = Number();
@@ -32,11 +22,16 @@ function changeImage() {
 
 function playAudio() {
     var audio = document.getElementById("gumball-theme");
+    var element = document.getElementById("gum2");
+    var elem_display = "flex";
+    while (True) {
+      if (element.style.display === elem_display)
+          break;
+    }
     audio.volume = 0.25;
     audio.play();
 }
 
-// first way
 function submit(){
     cleanErr();
     username = document.getElementById("myIn1").value;
@@ -54,18 +49,17 @@ function submit(){
         document.getElementById("err2").style.display = "inline-block";
         return;
     }
-    changeImage();
     cleanErr();
     cleanInputs();
+    changeImage();
+    playAudio();
     document.getElementById("myOut1").innerHTML = "Hello "+username+"!";
     document.getElementById("myOut2").innerHTML = "Your are "+age+" years old.";
     document.getElementById("date").innerHTML = "You have submitted on date:<br>"+Date();
     console.log(username, typeof username);
     console.log(age, typeof age);
-    playAudio();
 }
 
-// second way
 document.getElementById("gum").onclick = function(){
     var x = document.getElementById("gum");
     clicks++;
@@ -76,24 +70,3 @@ document.getElementById("gum").onclick = function(){
     }
     x.src = "images/gumball.png";
 }
-
-
-//gumball jump
-// function zjump() {
-//     let zac = document.getElementById("zac");
-//     let style = getComputedStyle(zac);
-//     let bottom = parseInt(style.bottom);
-
-//     if (bottom > 20) {return;}
-//     x = 100;
-
-//     document.getElementById("zac").style.bottom = x+bottom+"px";
-//     setTimeout(() => { document.getElementById("zac").style.bottom = "0px"; }, 500);
-    
-//   }
-
-// document.addEventListener("keydown", event => {
-//     if (event.key === "w") {
-//         zjump();
-//       }
-//     });

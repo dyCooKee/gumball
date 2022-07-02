@@ -1,7 +1,3 @@
-let username;
-let age;
-let clicks = Number();
-
 function cleanErr() {
     document.getElementById("err1").style.display = "none";
     document.getElementById("err2").style.display = "none";
@@ -23,9 +19,9 @@ function changeImage() {
 function playAudio() {
     var audio = document.getElementById("gumball-theme");
     var element = document.getElementById("gum2");
-    var elem_display = "flex";
+    var elem_display = "none";
     while (True) {
-      if (element.style.display === elem_display)
+      if (element.style.display !== elem_display)
           break;
     }
     audio.volume = 0.25;
@@ -33,9 +29,8 @@ function playAudio() {
 }
 
 function submit(){
-    cleanErr();
-    username = document.getElementById("myIn1").value;
-    age = document.getElementById("myIn2").value; age = Number(age);
+    var username = document.getElementById("myIn1").value;
+    var age = document.getElementById("myIn2").value; age = Number(age);
     if (!username && !age) { 
         document.getElementById("err1").style.display = "inline-block";
         document.getElementById("err2").style.display = "inline-block";
@@ -58,15 +53,4 @@ function submit(){
     document.getElementById("date").innerHTML = "You have submitted on date:<br>"+Date();
     console.log(username, typeof username);
     console.log(age, typeof age);
-}
-
-document.getElementById("gum").onclick = function(){
-    var x = document.getElementById("gum");
-    clicks++;
-    if (clicks > 4){
-        x.src = "images/angry-gumball.gif";
-        clicks-=2;
-        return
-    }
-    x.src = "images/gumball.png";
 }
